@@ -4,13 +4,7 @@ import { esCl } from './i18n/es-cl'
 import HomeGradient from './components/home-gradient'
 import Sidemenu from './components/sidemenu'
 import Nav from './components/nav'
-
-const navigation = [
-	{ name: 'Product', href: '#' },
-	{ name: 'Features', href: '#' },
-	{ name: 'Marketplace', href: '#' },
-	{ name: 'Company', href: '#' },
-]
+import { Button } from '@/components/ui/button'
 
 export default function Example() {
 	const [isSidemenuOpen, setIsSidemenuOpen] = useState(false)
@@ -47,24 +41,10 @@ export default function Example() {
 						</p>
 					</div>
 					<div className='flex flex-col gap-y-4 lg:flex-row lg:gap-x-4 sm:justify-center'>
-						<a
-							href='#'
-							className='inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700'
-						>
-							{esCl.welcome.shiftDrugstoreButtonLabel}
-							<span className='ml-2 text-indigo-200' aria-hidden='true'>
-								&rarr;
-							</span>
-						</a>
-						<a
-							href='#'
-							className='inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20'
-						>
+						<Button>{esCl.welcome.shiftDrugstoreButtonLabel}</Button>
+						<Button variant='secondary'>
 							{esCl.welcome.emergencyDrugstoreButtonLabel}
-							<span className='ml-2 text-gray-400' aria-hidden='true'>
-								&rarr;
-							</span>
-						</a>
+						</Button>
 					</div>
 				</div>
 
